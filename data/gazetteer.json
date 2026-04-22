@@ -1,0 +1,674 @@
+[
+  {
+    "name": "RN3 Big Pharmacy",
+    "aliases": [
+      "big pharmacy",
+      "pharmacy on rn3",
+      "pharmacie rn3",
+      "farumasi nini"
+    ],
+    "type": "pharmacy",
+    "lat": -1.9579,
+    "lon": 30.1129,
+    "district": "Gasabo"
+  },
+  {
+    "name": "Kimironko Market",
+    "aliases": [
+      "kimironko",
+      "isoko rya kimironko",
+      "marche de kimironko",
+      "kimironko market"
+    ],
+    "type": "market",
+    "lat": -1.9364,
+    "lon": 30.1307,
+    "district": "Gasabo"
+  },
+  {
+    "name": "Nyabugogo Bus Park",
+    "aliases": [
+      "nyabugogo",
+      "gare ya nyabugogo",
+      "nyabugogo gare",
+      "nyabugogo stop"
+    ],
+    "type": "stop",
+    "lat": -1.9399,
+    "lon": 30.0446,
+    "district": "Nyarugenge"
+  },
+  {
+    "name": "2050 Pharmacy",
+    "aliases": [
+      "2050 Pharmacy",
+      "2050 Pharmacy pharmacy",
+      "farumasi 2050 Pharmacy",
+      "pharmacie 2050 Pharmacy"
+    ],
+    "type": "pharmacy",
+    "lat": -1.9191648,
+    "lon": 30.056246,
+    "district": "Nyarugenge"
+  },
+  {
+    "name": "2050PHARMACY",
+    "aliases": [
+      "2050PHARMACY",
+      "2050PHARMACY pharmacy",
+      "250PHARMACY",
+      "farumasi 2050PHARMACY",
+      "pharmacie 2050PHARMACY"
+    ],
+    "type": "pharmacy",
+    "lat": -1.9257925,
+    "lon": 30.0554625,
+    "district": "Nyarugenge"
+  },
+  {
+    "name": "Abacus Pharma Alam",
+    "aliases": [
+      "Abacus Pharma Alam",
+      "Abacus Pharma Alam pharmacy",
+      "farumasi Abacus Pharma Alam",
+      "pharmacie Abacus Pharma Alam"
+    ],
+    "type": "pharmacy",
+    "lat": -1.9448004,
+    "lon": 30.0595445,
+    "district": "Nyarugenge"
+  },
+  {
+    "name": "Abirwa Pharmacy",
+    "aliases": [
+      "Abirwa Pharmacy",
+      "Abirwa Pharmacy pharmacy",
+      "farumasi Abirwa Pharmacy",
+      "pharmacie Abirwa Pharmacy"
+    ],
+    "type": "pharmacy",
+    "lat": -1.9585986,
+    "lon": 30.1157402,
+    "district": "Gasabo"
+  },
+  {
+    "name": "Adonis",
+    "aliases": [
+      "Adonis",
+      "Adonis pharmacy",
+      "farumasi Adonis",
+      "pharmacie Adonis"
+    ],
+    "type": "pharmacy",
+    "lat": -1.9985006,
+    "lon": 30.1454641,
+    "district": "Kicukiro"
+  },
+  {
+    "name": "Adrenaline Pharmacy Ltd",
+    "aliases": [
+      "Adrenaline Pharmacy",
+      "Adrenaline Pharmacy Ltd",
+      "Adrenaline Pharmacy Ltd pharmacy",
+      "farumasi Adrenaline Pharmacy Ltd",
+      "pharmacie Adrenaline Pharmacy Ltd"
+    ],
+    "type": "pharmacy",
+    "lat": -1.9683499,
+    "lon": 30.12141,
+    "district": "Kicukiro"
+  },
+  {
+    "name": "Advanced Pharmacy",
+    "aliases": [
+      "Advanced Pharmacy",
+      "Advanced Pharmacy pharmacy",
+      "farumasi Advanced Pharmacy",
+      "pharmacie Advanced Pharmacy"
+    ],
+    "type": "pharmacy",
+    "lat": -1.9152687,
+    "lon": 30.0669518,
+    "district": "Nyarugenge"
+  },
+  {
+    "name": "AERIS PHARMACY",
+    "aliases": [
+      "AERIS PHARMACY",
+      "AERIS PHARMACY pharmacy",
+      "farumasi AERIS PHARMACY",
+      "pharmacie AERIS PHARMACY"
+    ],
+    "type": "pharmacy",
+    "lat": -1.9257925,
+    "lon": 30.0554625,
+    "district": "Nyarugenge"
+  },
+  {
+    "name": "Afia Pharma",
+    "aliases": [
+      "Afia Pharma",
+      "Afia Pharma pharmacy",
+      "farumasi Afia Pharma",
+      "pharmacie Afia Pharma"
+    ],
+    "type": "pharmacy",
+    "lat": -1.9691775,
+    "lon": 30.0772754,
+    "district": "Kicukiro"
+  },
+  {
+    "name": "Afri Health Care Pharmacy",
+    "aliases": [
+      "Afri Health Care Pharmacy",
+      "Afri Health Care Pharmacy pharmacy",
+      "farumasi Afri Health Care Pharmacy",
+      "pharmacie Afri Health Care Pharmacy"
+    ],
+    "type": "pharmacy",
+    "lat": -1.946101,
+    "lon": 30.0568888,
+    "district": "Nyarugenge"
+  },
+  {
+    "name": "Africa Medical Supplier",
+    "aliases": [
+      "Africa Medical Supplier",
+      "Africa Medical Supplier pharmacy",
+      "farumasi Africa Medical Supplier",
+      "pharmacie Africa Medical Supplier"
+    ],
+    "type": "pharmacy",
+    "lat": -1.941265,
+    "lon": 30.059497,
+    "district": "Nyarugenge"
+  },
+  {
+    "name": "Agro-Vet Pharmacy Services",
+    "aliases": [
+      "Agro-Vet Pharmacy Services",
+      "Agro-Vet Pharmacy Services pharmacy",
+      "farumasi Agro-Vet Pharmacy Services",
+      "pharmacie Agro-Vet Pharmacy Services"
+    ],
+    "type": "pharmacy",
+    "lat": -1.9155585,
+    "lon": 30.0782101,
+    "district": "Gasabo"
+  },
+  {
+    "name": "7 days advantist church",
+    "aliases": [
+      "7 days advantist church",
+      "7 days advantist church church",
+      "eglise 7 days advantist church",
+      "itorero 7 days advantist church"
+    ],
+    "type": "church",
+    "lat": -1.9392921,
+    "lon": 30.0760669,
+    "district": "Gasabo"
+  },
+  {
+    "name": "7th Day Adventist Kibagabaga",
+    "aliases": [
+      "7th Day Adventist Kibagabaga",
+      "7th Day Adventist Kibagabaga church",
+      "eglise 7th Day Adventist Kibagabaga",
+      "itorero 7th Day Adventist Kibagabaga"
+    ],
+    "type": "church",
+    "lat": -1.9425348,
+    "lon": 30.1246532,
+    "district": "Gasabo"
+  },
+  {
+    "name": "ADEPR Kabeza",
+    "aliases": [
+      "ADEPR Kabeza",
+      "ADEPR Kabeza church",
+      "eglise ADEPR Kabeza",
+      "itorero ADEPR Kabeza"
+    ],
+    "type": "church",
+    "lat": -1.9718111,
+    "lon": 30.131985,
+    "district": "Kicukiro"
+  },
+  {
+    "name": "ADEPR Kanyinya",
+    "aliases": [
+      "ADEPR Kanyinya",
+      "ADEPR Kanyinya church",
+      "eglise ADEPR Kanyinya",
+      "itorero ADEPR Kanyinya"
+    ],
+    "type": "church",
+    "lat": -1.8945947,
+    "lon": 29.9907075,
+    "district": "Nyarugenge"
+  },
+  {
+    "name": "ADEPR Kimihurura",
+    "aliases": [
+      "ADEPR Kimihurura",
+      "ADEPR Kimihurura church",
+      "eglise ADEPR Kimihurura",
+      "itorero ADEPR Kimihurura"
+    ],
+    "type": "church",
+    "lat": -1.9560156,
+    "lon": 30.0812067,
+    "district": "Gasabo"
+  },
+  {
+    "name": "ADEPR Shell",
+    "aliases": [
+      "ADEPR Shell",
+      "ADEPR Shell church",
+      "eglise ADEPR Shell",
+      "itorero ADEPR Shell"
+    ],
+    "type": "church",
+    "lat": -1.9699158,
+    "lon": 30.10021,
+    "district": "Kicukiro"
+  },
+  {
+    "name": "ADEPR Shyorongi",
+    "aliases": [
+      "ADEPR Shyorongi",
+      "ADEPR Shyorongi church",
+      "eglise ADEPR Shyorongi",
+      "itorero ADEPR Shyorongi"
+    ],
+    "type": "church",
+    "lat": -1.853774,
+    "lon": 29.9676072,
+    "district": "Nyarugenge"
+  },
+  {
+    "name": "ADPER BUSANZA",
+    "aliases": [
+      "ADPER BUSANZA",
+      "ADPER BUSANZA church",
+      "eglise ADPER BUSANZA",
+      "itorero ADPER BUSANZA"
+    ],
+    "type": "church",
+    "lat": -1.9971542,
+    "lon": 30.1452309,
+    "district": "Kicukiro"
+  },
+  {
+    "name": "ADPR Karembure",
+    "aliases": [
+      "ADPR Karembure",
+      "ADPR Karembure church",
+      "eglise ADPR Karembure",
+      "itorero ADPR Karembure"
+    ],
+    "type": "church",
+    "lat": -2.0072429,
+    "lon": 30.0904299,
+    "district": "Kicukiro"
+  },
+  {
+    "name": "ADPR MUBUGA",
+    "aliases": [
+      "ADPR MUBUGA",
+      "ADPR MUBUGA church",
+      "eglise ADPR MUBUGA",
+      "itorero ADPR MUBUGA"
+    ],
+    "type": "church",
+    "lat": -2.0248382,
+    "lon": 30.0838834,
+    "district": "Kicukiro"
+  },
+  {
+    "name": "Adventist church",
+    "aliases": [
+      "Adventist church",
+      "Adventist church church",
+      "eglise Adventist church",
+      "itorero Adventist church"
+    ],
+    "type": "church",
+    "lat": -1.9658364,
+    "lon": 30.1198241,
+    "district": "Kicukiro"
+  },
+  {
+    "name": "AEBR Bumbogo",
+    "aliases": [
+      "AEBR Bumbogo",
+      "AEBR Bumbogo church",
+      "eglise AEBR Bumbogo",
+      "itorero AEBR Bumbogo"
+    ],
+    "type": "church",
+    "lat": -1.8767614,
+    "lon": 30.1572416,
+    "district": "Gasabo"
+  },
+  {
+    "name": "AEBR Kacyiru",
+    "aliases": [
+      "AEBR Kacyiru",
+      "AEBR Kacyiru church",
+      "eglise AEBR Kacyiru",
+      "itorero AEBR Kacyiru"
+    ],
+    "type": "church",
+    "lat": -1.9422766,
+    "lon": 30.0886121,
+    "district": "Gasabo"
+  },
+  {
+    "name": "ADEV TVET school",
+    "aliases": [
+      "ADEV TVET school",
+      "ADEV TVET school bus stop",
+      "ADEV TVET school stop",
+      "gare ADEV TVET school",
+      "gare ya ADEV TVET school"
+    ],
+    "type": "stop",
+    "lat": -2.0120805,
+    "lon": 30.1076007,
+    "district": "Kicukiro"
+  },
+  {
+    "name": "Akagera Motoe",
+    "aliases": [
+      "Akagera Motoe",
+      "Akagera Motoe bus stop",
+      "Akagera Motoe stop",
+      "gare Akagera Motoe",
+      "gare ya Akagera Motoe"
+    ],
+    "type": "stop",
+    "lat": -1.9680392,
+    "lon": 30.0942392,
+    "district": "Kicukiro"
+  },
+  {
+    "name": "Akagera Motor",
+    "aliases": [
+      "Akagera Motor",
+      "Akagera Motor bus stop",
+      "Akagera Motor stop",
+      "gare Akagera Motor",
+      "gare ya Akagera Motor"
+    ],
+    "type": "stop",
+    "lat": -1.9680711,
+    "lon": 30.0939085,
+    "district": "Kicukiro"
+  },
+  {
+    "name": "Alpha",
+    "aliases": [
+      "Alpha",
+      "Alpha bus stop",
+      "Alpha stop",
+      "gare Alpha",
+      "gare ya Alpha"
+    ],
+    "type": "stop",
+    "lat": -1.969256,
+    "lon": 30.1558302,
+    "district": "Kicukiro"
+  },
+  {
+    "name": "Ambassade ya Uganda",
+    "aliases": [
+      "Ambassade ya Uganda",
+      "Ambassade ya Uganda bus stop",
+      "Ambassade ya Uganda stop",
+      "gare Ambassade ya Uganda",
+      "gare ya Ambassade ya Uganda"
+    ],
+    "type": "stop",
+    "lat": -1.9383513,
+    "lon": 30.0862669,
+    "district": "Gasabo"
+  },
+  {
+    "name": "APAPEC",
+    "aliases": [
+      "APAPEC",
+      "APAPEC bus stop",
+      "APAPEC stop",
+      "gare APAPEC",
+      "gare ya APAPEC"
+    ],
+    "type": "stop",
+    "lat": -1.9205074,
+    "lon": 30.0727925,
+    "district": "Nyarugenge"
+  },
+  {
+    "name": "Arrete",
+    "aliases": [
+      "Arrete",
+      "Arrete bus stop",
+      "Arrete stop",
+      "gare Arrete",
+      "gare ya Arrete"
+    ],
+    "type": "stop",
+    "lat": -1.9717661,
+    "lon": 29.9805697,
+    "district": "Nyarugenge"
+  },
+  {
+    "name": "Azam",
+    "aliases": [
+      "Azam",
+      "Azam bus stop",
+      "Azam stop",
+      "gare Azam",
+      "gare ya Azam"
+    ],
+    "type": "stop",
+    "lat": -1.929772,
+    "lon": 30.1519069,
+    "district": "Gasabo"
+  },
+  {
+    "name": "Batsinda",
+    "aliases": [
+      "Batsinda",
+      "Batsinda bus stop",
+      "Batsinda stop",
+      "gare Batsinda",
+      "gare ya Batsinda"
+    ],
+    "type": "stop",
+    "lat": -1.903496,
+    "lon": 30.0788564,
+    "district": "Gasabo"
+  },
+  {
+    "name": "Beaus\u00e9jour",
+    "aliases": [
+      "Beaus\u00e9jour",
+      "Beaus\u00e9jour bus stop",
+      "Beaus\u00e9jour stop",
+      "gare Beaus\u00e9jour",
+      "gare ya Beaus\u00e9jour"
+    ],
+    "type": "stop",
+    "lat": -1.9577292,
+    "lon": 30.1049185,
+    "district": "Gasabo"
+  },
+  {
+    "name": "Beltoire",
+    "aliases": [
+      "Beltoire",
+      "Beltoire bus stop",
+      "Beltoire stop",
+      "gare Beltoire",
+      "gare ya Beltoire"
+    ],
+    "type": "stop",
+    "lat": -1.9146795,
+    "lon": 30.0661596,
+    "district": "Nyarugenge"
+  },
+  {
+    "name": "COMO BUSINESS CENTER",
+    "aliases": [
+      "COMO BUSINESS",
+      "COMO BUSINESS CENTER",
+      "COMO BUSINESS CENTER market",
+      "isoko COMO BUSINESS CENTER",
+      "marche COMO BUSINESS CENTER"
+    ],
+    "type": "market",
+    "lat": -1.9395632,
+    "lon": 30.0481923,
+    "district": "Nyarugenge"
+  },
+  {
+    "name": "Fruits market",
+    "aliases": [
+      "Fruits market",
+      "Fruits market market",
+      "isoko Fruits market",
+      "marche Fruits market"
+    ],
+    "type": "market",
+    "lat": -1.9604024,
+    "lon": 30.137553,
+    "district": "Kicukiro"
+  },
+  {
+    "name": "Fruits shop",
+    "aliases": [
+      "Fruits shop",
+      "Fruits shop market",
+      "Magasin de fruits",
+      "isoko Fruits shop",
+      "marche Fruits shop"
+    ],
+    "type": "market",
+    "lat": -1.998545,
+    "lon": 30.1453065,
+    "district": "Kicukiro"
+  },
+  {
+    "name": "Gahanga Market",
+    "aliases": [
+      "Gahanga Market",
+      "Gahanga Market market",
+      "isoko Gahanga Market",
+      "marche Gahanga Market"
+    ],
+    "type": "market",
+    "lat": -2.0266587,
+    "lon": 30.1045776,
+    "district": "Kicukiro"
+  },
+  {
+    "name": "Kabeza Modern Market",
+    "aliases": [
+      "Isoko rya Kabeza",
+      "Kabeza Modern Market",
+      "Kabeza Modern Market market",
+      "March\u00e9 Moderne de Kabeza",
+      "isoko Kabeza Modern Market",
+      "marche Kabeza Modern Market"
+    ],
+    "type": "market",
+    "lat": -1.9700562,
+    "lon": 30.1257077,
+    "district": "Kicukiro"
+  },
+  {
+    "name": "Kagugu Minimarket",
+    "aliases": [
+      "Kagugu Minimarket",
+      "Kagugu Minimarket market",
+      "isoko Kagugu Minimarket",
+      "marche Kagugu Minimarket"
+    ],
+    "type": "market",
+    "lat": -1.9183711,
+    "lon": 30.0909148,
+    "district": "Gasabo"
+  },
+  {
+    "name": "Kicukiro Market",
+    "aliases": [
+      "Isoko rya Kicukiro",
+      "Kicukiro Market",
+      "Kicukiro Market market",
+      "March\u00e9 de Kicukiro Isoko",
+      "isoko Kicukiro Market",
+      "marche Kicukiro Market"
+    ],
+    "type": "market",
+    "lat": -1.9814931,
+    "lon": 30.1044117,
+    "district": "Kicukiro"
+  },
+  {
+    "name": "Mu Itunda",
+    "aliases": [
+      "Mu Itunda",
+      "Mu Itunda market",
+      "isoko Mu Itunda",
+      "marche Mu Itunda"
+    ],
+    "type": "market",
+    "lat": -1.9785477,
+    "lon": 30.148494,
+    "district": "Kicukiro"
+  },
+  {
+    "name": "Nyamirambo Market Place",
+    "aliases": [
+      "Nyamirambo Market Place",
+      "Nyamirambo Market Place market",
+      "Place du march\u00e9 de Nyamirambo",
+      "isoko Nyamirambo Market Place",
+      "marche Nyamirambo Market Place"
+    ],
+    "type": "market",
+    "lat": -1.9752781,
+    "lon": 30.0511151,
+    "district": "Nyarugenge"
+  },
+  {
+    "name": "Remera Market",
+    "aliases": [
+      "March\u00e9 de Remera",
+      "Remera Market",
+      "Remera Market market",
+      "isoko Remera Market",
+      "marche Remera Market"
+    ],
+    "type": "market",
+    "lat": -1.957872,
+    "lon": 30.1192537,
+    "district": "Gasabo"
+  },
+  {
+    "name": "Zinia Market",
+    "aliases": [
+      "March\u00e9 Zinia",
+      "Zinia Market",
+      "Zinia Market market",
+      "isoko Zinia Market",
+      "marche Zinia Market"
+    ],
+    "type": "market",
+    "lat": -1.9723033,
+    "lon": 30.0992332,
+    "district": "Kicukiro"
+  }
+]
