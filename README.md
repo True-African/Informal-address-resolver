@@ -27,13 +27,13 @@ The demo should work on a free Colab CPU. The repository includes generated samp
 python generate_data.py
 ```
 
-To build the gazetteer from live OpenStreetMap data first:
+Optional: to try rebuilding the gazetteer from live OpenStreetMap data first:
 
 ```bash
 python generate_data.py --refresh-osm
 ```
 
-This uses OpenStreetMap/Overpass only to create the local `data/gazetteer.json`. The submitted resolver itself does not make network calls.
+This uses OpenStreetMap/Overpass only to create the local `data/gazetteer.json`. The submitted resolver itself does not make network calls. If Overpass is slow or returns a gateway timeout, the script continues with the existing local gazetteer or the bundled fallback landmarks. For grading, `python generate_data.py` is sufficient and works offline.
 
 The generated files follow the challenge schema:
 

@@ -17,6 +17,7 @@ import json
 import random
 import re
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -246,14 +247,21 @@ def select_landmarks(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return selected[:50]
 
 
-def refresh_osm_gazetteer() -> None:
+def refresh_osm_gazetteer() -> bool:
     """Refresh data/gazetteer.json from OpenStreetMap."""
     started = time.time()
-    raw = fetch_overpass()
-    landmarks = select_landmarks(osm_elements_to_landmarks(raw))
+    try:
+        raw = fetch_overpass()
+        landmarks = select_landmarks(osm_elements_to_landmarks(raw))
+    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError, RuntimeError, json.JSONDecodeError) as exc:
+        print(f"OpenStreetMap refresh skipped: {exc}")
+        print("Continuing with existing data/gazetteer.json or the bundled fallback landmarks.")
+        return False
+
     GAZETTEER_PATH.write_text(json.dumps(landmarks, indent=2), encoding="utf-8")
     print(f"Fetched {len(raw.get('elements', []))} OSM elements.")
     print(f"Wrote {GAZETTEER_PATH} with {len(landmarks)} landmarks in {time.time() - started:.1f}s.")
+    return True
 
 
 def maybe_typo(text: str, rng: random.Random) -> str:
