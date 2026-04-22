@@ -184,7 +184,3 @@ See `correction_flow.md` for the low-bandwidth rider correction workflow, includ
 ## Video
 
 4-minute video URL: TODO paste unlisted YouTube/Vimeo/Drive link here.
-
-## Process and Honor Code
-
-See `process_log.md` and `SIGNED.md`.
