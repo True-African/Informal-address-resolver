@@ -14,26 +14,42 @@ The resolver takes a free-text address description and returns:
 }
 ```
 
-## Two-Command Quick Run
+## Local Setup and Quick Run
+
+Create a virtual environment:
 
 ```bash
-pip install -r requirements.txt
-python -c "from resolver import resolve; print(resolve('inyuma ya big pharmacy on RN3, red gate'))"
+python -m venv .venv
 ```
+
+Install the required packages:
+
+```bash
+./.venv/Scripts/python.exe -m pip install --upgrade pip
+./.venv/Scripts/python.exe -m pip install -r requirements.txt
+```
+
+Run the required demo:
+
+```bash
+./.venv/Scripts/python.exe -c "from resolver import resolve; print(resolve('inyuma ya big pharmacy on RN3, red gate'))"
+```
+
+These commands use Git Bash on Windows. In PowerShell, use `& .\.venv\Scripts\python.exe` instead of `./.venv/Scripts/python.exe`.
 
 The demo should work on a free Colab CPU. The repository includes generated sample data under `data/`. To regenerate it:
 
 ```bash
-python generate_data.py
+./.venv/Scripts/python.exe generate_data.py
 ```
 
 Optional: to try rebuilding the gazetteer from live OpenStreetMap data first:
 
 ```bash
-python generate_data.py --refresh-osm
+./.venv/Scripts/python.exe generate_data.py --refresh-osm
 ```
 
-This uses OpenStreetMap/Overpass only to create the local `data/gazetteer.json`. The submitted resolver itself does not make network calls. If Overpass is slow or returns a gateway timeout, the script continues with the existing local gazetteer or the bundled fallback landmarks. For grading, `python generate_data.py` is sufficient and works offline.
+This uses OpenStreetMap/Overpass only to create the local `data/gazetteer.json`. The submitted resolver itself does not make network calls. If Overpass is slow or returns a gateway timeout, the script continues with the existing local gazetteer or the bundled fallback landmarks. For grading, `./.venv/Scripts/python.exe generate_data.py` is sufficient and works offline.
 
 The generated files follow the challenge schema:
 
@@ -88,13 +104,13 @@ N/A. This Tier 1 submission uses OpenStreetMap-derived gazetteer data plus a CPU
 ## Run Tests
 
 ```bash
-python -m unittest discover -s tests
+./.venv/Scripts/python.exe -m unittest discover -s tests
 ```
 
 ## Evaluation
 
 ```bash
-python resolver.py --eval
+./.venv/Scripts/python.exe resolver.py --eval
 ```
 
 The evaluation reports:
@@ -109,7 +125,7 @@ You can also open `eval.ipynb` to inspect the same evaluation flow.
 ## Required Demo Command
 
 ```bash
-python -c "from resolver import resolve; print(resolve('inyuma ya big pharmacy on RN3, red gate'))"
+./.venv/Scripts/python.exe -c "from resolver import resolve; print(resolve('inyuma ya big pharmacy on RN3, red gate'))"
 ```
 
 Example output shape:
