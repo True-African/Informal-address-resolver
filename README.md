@@ -26,6 +26,20 @@ The resolver uses a local landmark gazetteer, fuzzy matching, simple direction r
 
 ## Setup
 
+Clone the repository and enter the project folder:
+
+```bash
+git clone https://github.com/YOUR_USERNAME/Informal-address-resolver.git
+cd Informal-address-resolver
+```
+
+If you are using the Hugging Face Space repository instead:
+
+```bash
+git clone https://huggingface.co/spaces/Iyumva/Informal-address-resolver
+cd Informal-address-resolver
+```
+
 Create a virtual environment:
 
 ```bash
