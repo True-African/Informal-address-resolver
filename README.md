@@ -8,14 +8,9 @@ pinned: false
 
 # T1.2 Informal Address Resolver
 
-CPU-only resolver for informal delivery addresses in Kigali-style logistics settings.
+This project resolves informal delivery address descriptions into usable GPS coordinates. It is designed for Kigali-style logistics settings where addresses often mix English, French, and Kinyarwanda, and may describe places by nearby landmarks instead of formal street addresses.
 
-The resolver converts mixed English, French, and Kinyarwanda address descriptions into coordinates using:
-
-- OpenStreetMap-style landmark gazetteer data;
-- fuzzy landmark matching;
-- spatial direction rules such as `behind`, `inyuma ya`, `derriere`, `near`, and `opposite`;
-- confidence scoring and an explainable rationale.
+The resolver uses a local landmark gazetteer, fuzzy matching, simple direction rules, and geospatial offsets. For each input, it returns latitude, longitude, confidence, the matched landmark, and a short rationale explaining the decision.
 
 ## Output Shape
 
