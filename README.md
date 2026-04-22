@@ -1,3 +1,11 @@
+---
+title: T1.2 Informal Address Resolver
+sdk: gradio
+app_file: app.py
+license: mit
+pinned: false
+---
+
 # T1.2 Informal Address Resolver
 
 CPU-only resolver for informal delivery addresses in Kigali-style logistics settings.
@@ -76,6 +84,18 @@ Example output:
 
 Exact coordinates may differ slightly depending on the gazetteer and offset calculation.
 
+## Hugging Face Space
+
+This repository is ready to run as a Hugging Face Gradio Space through `app.py`.
+
+To test the Space locally:
+
+```bash
+python app.py
+```
+
+Then open the local URL printed by Gradio.
+
 ## Generate Data
 
 The repository already includes generated sample data under `data/`.
@@ -134,6 +154,7 @@ N/A. This Tier 1 submission uses a CPU-only rule-based and fuzzy-matching resolv
 |-- README.md
 |-- LICENSE
 |-- requirements.txt
+|-- app.py
 |-- resolver.py
 |-- generate_data.py
 |-- eval.ipynb
