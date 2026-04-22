@@ -1,8 +1,15 @@
 # T1.2 Informal Address Resolver
 
-CPU-only resolver for informal, multilingual delivery addresses in Kigali-style logistics settings.
+CPU-only resolver for informal delivery addresses in Kigali-style logistics settings.
 
-The resolver takes a free-text address description and returns:
+The resolver converts mixed English, French, and Kinyarwanda address descriptions into coordinates using:
+
+- OpenStreetMap-style landmark gazetteer data;
+- fuzzy landmark matching;
+- spatial direction rules such as `behind`, `inyuma ya`, `derriere`, `near`, and `opposite`;
+- confidence scoring and an explainable rationale.
+
+## Output Shape
 
 ```python
 {
@@ -14,7 +21,7 @@ The resolver takes a free-text address description and returns:
 }
 ```
 
-## Local Setup and Quick Run
+## Setup
 
 Create a virtual environment:
 
@@ -22,63 +29,103 @@ Create a virtual environment:
 python -m venv .venv
 ```
 
-Install the required packages:
+Activate it using the command for your terminal:
 
 ```bash
-./.venv/Scripts/python.exe -m pip install --upgrade pip
-./.venv/Scripts/python.exe -m pip install -r requirements.txt
+# Windows Git Bash
+source .venv/Scripts/activate
+
+# Windows PowerShell
+.\.venv\Scripts\Activate.ps1
+
+# Linux, macOS, or Colab
+source .venv/bin/activate
 ```
 
-Run the required demo:
+Install packages:
 
 ```bash
-./.venv/Scripts/python.exe -c "from resolver import resolve; print(resolve('inyuma ya big pharmacy on RN3, red gate'))"
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 ```
 
-These commands use Git Bash on Windows. In PowerShell, use `& .\.venv\Scripts\python.exe` instead of `./.venv/Scripts/python.exe`.
+If PowerShell blocks activation, run the same commands through the environment Python:
 
-The demo should work on a free Colab CPU. The repository includes generated sample data under `data/`. To regenerate it:
+```powershell
+& .\.venv\Scripts\python.exe -m pip install --upgrade pip
+& .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
+
+## Required Demo
 
 ```bash
-./.venv/Scripts/python.exe generate_data.py
+python -c "from resolver import resolve; print(resolve('inyuma ya big pharmacy on RN3, red gate'))"
 ```
 
-Optional: to try rebuilding the gazetteer from live OpenStreetMap data first:
+Example output:
+
+```python
+{
+    "lat": -1.9584,
+    "lon": 30.1129,
+    "confidence": 1.0,
+    "matched_landmark": "RN3 Big Pharmacy",
+    "rationale": "Matched alias 'RN3 Big Pharmacy' for landmark 'RN3 Big Pharmacy' with score 100.0; modifier 'behind' from phrase 'inyuma' applied."
+}
+```
+
+Exact coordinates may differ slightly depending on the gazetteer and offset calculation.
+
+## Generate Data
+
+The repository already includes generated sample data under `data/`.
+
+To regenerate the challenge-shaped dataset:
 
 ```bash
-./.venv/Scripts/python.exe generate_data.py --refresh-osm
+python generate_data.py
 ```
 
-This uses OpenStreetMap/Overpass only to create the local `data/gazetteer.json`. The submitted resolver itself does not make network calls. If Overpass is slow or returns a gateway timeout, the script continues with the existing local gazetteer or the bundled fallback landmarks. For grading, `./.venv/Scripts/python.exe generate_data.py` is sufficient and works offline.
+This produces:
 
-The generated files follow the challenge schema:
+- `data/descriptions.csv`: 200 rows with `description_text, language_hint_optional`;
+- `data/gazetteer.json`: 50 landmarks with `name, aliases, type, lat, lon, district`;
+- `data/gold.csv`: 50 rows with `description_id, true_lat, true_lon`.
 
-- `descriptions.csv`: 200 rows with only `description_text, language_hint_optional`.
-- `gazetteer.json`: 50 landmarks with `name, aliases, type, lat, lon, district`.
-- `gold.csv`: 50 rows with `description_id, true_lat, true_lon`.
+Because `descriptions.csv` has no `description_id` column, IDs are implicit: `D001` is row 1, `D002` is row 2, and so on.
 
-Because the brief does not include `description_id` in `descriptions.csv`, IDs are implicit: `D001` is row 1, `D002` is row 2, and so on.
+Optional OpenStreetMap refresh:
 
-## What This Project Does
+```bash
+python generate_data.py --refresh-osm
+```
 
-This submission resolves informal addresses such as:
+This only tries to rebuild `data/gazetteer.json` from OpenStreetMap/Overpass. The submitted resolver does not make network calls. If Overpass times out, the script continues with the existing local gazetteer or bundled fallback landmarks.
 
-- `inyuma ya big pharmacy on RN3, red gate`
-- `derriere marche de kimironko, portail rouge`
-- `hafi ya gare ya nyabugogo`
+## Run Tests
 
-It uses a small deterministic pipeline:
+```bash
+python -m unittest discover -s tests
+```
 
-1. Normalize noisy text.
-2. Detect language clues from English, French, and Kinyarwanda keywords.
-3. Fuzzy-match landmark names and aliases from `data/gazetteer.json`, which can be generated from OpenStreetMap.
-4. Detect spatial modifiers such as `behind`, `inyuma ya`, `derriere`, `near`, and `opposite`.
-5. Apply a small coordinate offset with Geopy when available, with a math fallback.
-6. Return confidence and a rationale.
+## Evaluation
+
+```bash
+python resolver.py --eval
+```
+
+The evaluation reports:
+
+- mean haversine error in meters;
+- percent of predictions within 100 m;
+- percent of predictions within 300 m;
+- five highest-error cases for analysis.
+
+`eval.ipynb` is included as an optional notebook version of the same evaluation flow.
 
 ## Model / Checkpoint
 
-N/A. This Tier 1 submission uses OpenStreetMap-derived gazetteer data plus a CPU-only rule-based and fuzzy-matching resolver. No trained model or checkpoint is produced. The algorithm is fully contained in `resolver.py` and can be run from the commands above.
+N/A. This Tier 1 submission uses a CPU-only rule-based and fuzzy-matching resolver. No trained model or checkpoint is produced. The full algorithm is in `resolver.py`.
 
 ## Repository Structure
 
@@ -101,58 +148,17 @@ N/A. This Tier 1 submission uses OpenStreetMap-derived gazetteer data plus a CPU
     `-- test_resolver.py
 ```
 
-## Run Tests
-
-```bash
-./.venv/Scripts/python.exe -m unittest discover -s tests
-```
-
-## Evaluation
-
-```bash
-./.venv/Scripts/python.exe resolver.py --eval
-```
-
-The evaluation reports:
-
-- mean haversine error in meters;
-- percent of predictions within 100 m;
-- percent of predictions within 300 m;
-- five highest-error cases for analysis.
-
-You can also open `eval.ipynb` to inspect the same evaluation flow.
-
-## Required Demo Command
-
-```bash
-./.venv/Scripts/python.exe -c "from resolver import resolve; print(resolve('inyuma ya big pharmacy on RN3, red gate'))"
-```
-
-Example output shape:
-
-```python
-{
-    "lat": -1.9585,
-    "lon": 30.1234,
-    "confidence": 0.93,
-    "matched_landmark": "RN3 Big Pharmacy",
-    "rationale": "Matched alias 'big pharmacy' with score 100.0; modifier 'behind' applied."
-}
-```
-
-Exact coordinates may differ depending on the gazetteer and modifier offset.
-
 ## Product and Business Adaptation
 
 See `correction_flow.md` for the low-bandwidth rider correction workflow, including offline storage, sync behavior, conflict resolution, estimated data volume, and why the process is cheaper than paper bug reports.
 
 ## Known Limitations
 
-- The resolver is only as good as the gazetteer aliases.
-- Missing or unknown landmarks are escalated rather than guessed.
-- Directional offsets are approximate and intentionally simple.
-- Mixed descriptions with multiple landmarks may choose the strongest fuzzy match.
-- This is a Tier 1 baseline, designed for clarity and live defense rather than maximum geographic accuracy.
+- The resolver depends on the coverage and aliases in the gazetteer.
+- Unknown landmarks are escalated instead of guessed.
+- Directional offsets are approximate.
+- Descriptions with multiple landmarks may choose the strongest fuzzy match.
+- This is a Tier 1 baseline designed for clarity, speed, and live defense.
 
 ## Video
 
